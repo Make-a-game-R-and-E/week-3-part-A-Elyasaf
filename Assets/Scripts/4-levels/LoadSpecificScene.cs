@@ -10,4 +10,9 @@ public class LoadSpecificScene : MonoBehaviour
         // Load the scene with the specified index
         UnityEngine.SceneManagement.SceneManager.LoadScene(sceneIndex);
     }
+    public void LoadStartScene()
+    {
+        // Load the scene with the specified index
+        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+    }
 }
