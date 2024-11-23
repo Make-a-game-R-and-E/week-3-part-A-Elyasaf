@@ -1,42 +1,51 @@
-# Unity week 2: Formal elements
-
-A project with step-by-step scenes illustrating some of the formal elements of game development in Unity, including: 
-
-* Prefabs for instantiating new objects;
-* Colliders for triggering outcomes of actions;
-* Coroutines for setting time-based rules.
-
-Text explanations are available 
-[here](https://github.com/gamedev-at-ariel/gamedev-5782) in folder 04.
-
-## Cloning
-To clone the project, you may need to install git lfs first (if it is not already installed):
-
-    git lfs install 
-
-To clone faster, you can limit the depth to 1 like this:
-
-    git clone --depth=1 https://github.com/<repository-name>.git
-
-When you first open this project, you may not see the text in the score field.
-This is because `TextMeshPro` is not in the project.
-The Unity Editor should hopefully prompt you to import TextMeshPro;
-once you do this, re-open the scenes, and you should be able to see the texts.
+# Video Game Programming Assignment - week 3 part A by Elyasaf
 
 
+## Features Implemented
 
-## Credits
+### **Part A: Core Features**
+1. **Score Display**
+   - The player's score is displayed at a fixed position on the screen.
 
-Programming:
-* Maoz Grossman
-* Erel Segal-Halevi
+2. **Health Points (HP) System**
+   - The player starts the game with three health points.
+   - Each collision with an enemy reduces the player’s HP by one.
+   - When the player's HP reaches zero, the spaceship is destroyed.
+   - Health pickups occasionally spawn on the screen. When collected, they restore one HP.
+   - A visual UI element shows the player’s remaining HP in a clear and intuitive way.
 
-Online courses:
-* [The Ultimate Guide to Game Development with Unity 2019](https://www.udemy.com/the-ultimate-guide-to-game-development-with-unity/), by Jonathan Weinberger
+3. **Enemy Types and Scoring**
+   - Two types of enemies:
+     - **Slow Enemy:** Awards 1 point when destroyed.
+     - **Fast Enemy:** Awards 2 points when destroyed.
+   - The implementation uses generalizable and extensible code, making it easy to add more enemy types with different behaviors and point values.
 
-Graphics:
-* [Matt Whitehead](https://ccsearch.creativecommons.org/photos/7fd4a37b-8d1a-4d4c-80a2-4ca4a3839941)
-* [Kenney's space kit](https://kenney.nl/assets/space-kit)
-* [Ductman's 2D Animated Spacehips](https://assetstore.unity.com/packages/2d/characters/2d-animated-spaceships-96852)
-* [Franc from the Noun Project](https://commons.wikimedia.org/w/index.php?curid=64661575)
-* [Greek-arrow-animated.gif by Andrikkos is licensed under CC BY-SA 3.0](https://search.creativecommons.org/photos/2db102af-80d0-4ec8-9171-1ac77d2565ce)
+---
+
+### **Part B: Original Features**
+1. **Point-Based Level Progression**
+   - Instead of moving to the next level upon reaching a specific location, the player progresses to the next level by earning a required number of points.
+
+2. **Screen Boundaries**
+   - The player’s spaceship cannot leave the screen boundaries, ensuring the gameplay stays within visible and interactive areas.
+
+---
+
+## How to Play
+
+1. **Basic Controls**
+   - Use keyboard or WASD inputs to control the spaceship.
+   - Collect health pickups to restore lost health.
+
+2. **Scoring**
+   - Destroy slow and fast enemies to earn points.
+   - Reach the target score to advance to the next level.
+
+3. **Survival**
+   - Avoid enemy collisions to conserve health points.
+   - Collect health pickups to increase survival time.
+
+---
+
+
+## [Link to itch.io]() // to add
