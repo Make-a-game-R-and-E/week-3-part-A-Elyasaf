@@ -5,11 +5,11 @@ public class PlayerHP : MonoBehaviour
 {
     [SerializeField]
     [Tooltip("Maximum amount of player HP")]
-    private int maxHP = 3;
+    int maxHP = 3;
 
     [SerializeField]
     [Tooltip("Current amount of player HP")]
-    private int currentHP;
+    int currentHP;
 
     [SerializeField]
     [Tooltip("Name of scene to move to when triggering the given tag")]
@@ -24,6 +24,9 @@ public class PlayerHP : MonoBehaviour
     void Start()
     {
         currentHP = maxHP;
+
+        healthUI = FindAnyObjectByType<HealthUI>();
+
         if (healthUI != null) { healthUI.SetHealth(currentHP); } // Update health UI
     }
 
